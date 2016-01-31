@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>Filmstrip Gallery Component
+    </title>
+    <link rel="stylesheet" href="css/style.css" type="text/css"></link>
+  </head>
+  <body>
+    <h2> FilmStrip Gallery Demo App </h2>
+    <div id="mainContent">
+     <div id="feature-sections-container">
+       <img class="img-banner" />
+       <div id="feature-sections"></div>
+     </div>
+   </div>
+
+    <script src="js/jquery/jquery.js" type="text/javascript"> </script>
+    <script src="js/filmstrip.js" type="text/javascript"> </script>
+
+    <script type="text/javascript">
+      var thumbnails = [];
+      for(var i=1;i<10;i++) {
+          thumbnails.push({name:"Thumnail-"+i, image:i+".jpg"});
+      }
+      var options = {data:thumbnails, featureImgUrl:'img/'};
+      $.FilmStrip(options).render();
+    </script>
+  </body>
+</html>
